@@ -497,14 +497,16 @@
             <!-- ==== Contact Form Start ==== -->
             <div class="row">
               <form
+                action="https://formsubmit.co/f1dc597636b23488698f0f1d2d64d2d9"
+                method="POST"
                 class="contact-form padd-15"
-                onsubmit="sendEmail(); reset(); return false;"
               >
                 <div class="row">
                   <div class="form-item col-6 padd-15">
                     <div class="form-group">
                       <input
                         type="text"
+                        name="name"
                         id="name"
                         class="form-control"
                         placeholder="Name"
@@ -515,6 +517,7 @@
                   <div class="form-item col-6 padd-15">
                     <div class="form-group">
                       <input
+                        name="email"
                         type="email"
                         id="email"
                         class="form-control"
@@ -528,6 +531,7 @@
                   <div class="form-item col-12 padd-15">
                     <div class="form-group">
                       <input
+                        name="subject"
                         type="text"
                         id="subject"
                         class="form-control"
@@ -541,7 +545,7 @@
                   <div class="form-item col-12 padd-15">
                     <div class="form-group">
                       <textarea
-                        name=""
+                        name="message"
                         id="message"
                         class="form-control"
                         placeholder="Message"
@@ -567,29 +571,6 @@
     </div>
     <!-- ==== Main Container End ==== -->
     <!-- ==== JS File ==== -->
-
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-      function sendEmail() {
-        Email.send({
-          Host: "smtp.gmail.com",
-          Username: "tygerzofficial@gmail.com",
-          Password: "eastsided",
-          To: "blester1989@gmail.com",
-          From: document.getElementById("email").value,
-          Subject: "New ED Portfolio Inquiry",
-          Body:
-            "Name: " +
-            document.getElementById("name").value +
-            "<br> Email: " +
-            document.getElementById("email").value +
-            "<br> Subject: " +
-            document.getElementById("subject").value +
-            "<br> Message: " +
-            document.getElementById("message").value,
-        }).then((message) => alert("Message sent!"));
-      }
-    </script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
       referrerpolicy="no-referrer"
